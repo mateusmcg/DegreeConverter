@@ -12,12 +12,14 @@ namespace DegreeConverter.Controllers
         [HttpGet("celsius/{fahrenheit}")]
         public decimal GetCelsius(decimal fahrenheit)
         {
+            Console.WriteLine(Environment.MachineName);
             return ((fahrenheit - 32) * 5) / 9;
         }
 
         [HttpGet("fahrenheit/{celsius}")]
         public decimal GetFahrenheit(decimal celsius)
         {
+            Console.WriteLine(Environment.MachineName);
             return celsius * (9/5) + 32;
         }
     }
